@@ -15,7 +15,7 @@ typedef struct Ficha
 
 int main(int argc, char* argv[]){
 
-    struct Ficha A;
+    Ficha A;
     strcpy(A.nome, "Maria Alves");
     strcpy(A.Numero, "(61) 12345-6789");
     strcpy(A.endereço, "Shis 12 25 13");
