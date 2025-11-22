@@ -14,10 +14,10 @@ int main() {
     float Preco;
     char Item[50];
 
-    while (fscanf(fp, "%d %f %s", &Qtd, &Preco, &Item) != EOF) {
-            printf("%d \t %f \t %s", Qtd, Preco, Item  );
-}
-
+    for(int i = 0; i < 4; i++){
+        fscanf(fp, "%s %d %f\n", Item, &Qtd, &Preco);
+        printf("%s \t %d \t %.2f\n", Item, Qtd, Preco);
+    }
 
     fclose(fp);
     return 0;

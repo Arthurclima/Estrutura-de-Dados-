@@ -14,27 +14,29 @@ Item * criarItem(int Chave) {
     I -> Chave = Chave;
     I -> Anterior = NULL;
 
+    return I;
 }
 
 Pilha * criarpilha(){
-    Pilha * P = (Pilha *) malloc (sizeof(Item));
+    Pilha * P = (Pilha *) malloc (sizeof(Pilha));
     if (P == NULL){
-        printf ("ERRO: Nao foi possivel alocar memoria para o item.");
-            return NULL;
+        printf ("ERRO: Nao foi possivel alocar memoria para a pilha.");
+        return NULL;
     }
 
     P -> Tamanho = 0;
     P -> Topo = NULL;
 
-    return I; 
+    return P; 
 }
 
 
 void empilhar(Pilha * P, Item * I){
+    if (P == NULL || I == NULL) return;
 
-    I -> Anterior;
-    P -> Topo = I;
-    P -> Tamanho++;
+    I->Anterior = P->Topo;
+    P->Topo = I;
+    P->Tamanho++;
 }
 
 
